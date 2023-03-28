@@ -1,14 +1,14 @@
-export const buildReciepeReqWithIngrad = (input: FormDataEntryValue) => {
+export const buildReciepeReqWithIngrad = (input: FormDataEntryValue):string  => {
 
   const prompt = `Give me a reciepe using only the following ingredients: ${input}`;
   return prompt;
 };
 
-export async function buildResponseElement(serverResponse: any) {
-  if (serverResponse === null) {
+export function buildResponseElement(result: any): string{
+  if (result === null) {
     return "";
   }
-  serverResponse =  await serverResponse.json();
-  console.log(serverResponse);
-  return serverResponse.content;
+
+  console.log(result);
+  return result.content;
 };

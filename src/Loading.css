@@ -1,0 +1,21 @@
+
+
+.loader {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  animation: 3s ease-in-out infinite shifts;
+}
+
+@keyframes shifts {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+
+}
